@@ -1,0 +1,3 @@
+virus
+<h1>Show Viruses</h1>
+<%= @virus.name %>
