@@ -1,13 +1,12 @@
 defmodule Covid.Data do
     alias Covid.Virus.Info
+    alias Covid.Repo
     def list_viruses do
-    [
-        %Info{code: "001", name: "covid 19"},
-        %Info{code: "002", name: "sar 20"},
-        %Info{code: "003", name: "ebola 21"}
-    ]
+        Info
+        |> Repo.all()
     end
     def get_virus_by_code(code) do
-        Enum.find(list_viruses, fn x -> x.code == code end)
+       Info
+       |> Repo.get_by(code: code)
     end
 end
