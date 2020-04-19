@@ -1,0 +1,6 @@
+<%= form_for @changeset,  @action, fn f -> %> <div>
+<%= text_input f, :code, placeholder: "code" %> </div>
+<div>
+<%= text_input f, :name, placeholder: "name" %> </div>
+<%= text_input f, :description, placeholder: "description" %> </div>
+<%= submit "Save" %> <% end %>

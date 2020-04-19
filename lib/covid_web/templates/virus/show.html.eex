@@ -1,3 +1,7 @@
 virus
 <h1>Show Viruses</h1>
-<%= @virus.name %>
+<b>Code:</b> <%= @virus.code %><br>
+<b>Name:</b> <%= @virus.name %><br>
+<b>Description:</b> <%= @virus.description %><br>
+
+<%= button "Back", to: "/viruses", method: "get" %>
